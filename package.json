@@ -1,5 +1,5 @@
 {
-  "version": "0.0.0",
+  "version": "1.0.0",
   "name": "@lukeed/nanoid",
   "repository": "lukeed/nanoid",
   "description": "A tiny (141 bytes), secure URL-friendly unique string ID generator",
