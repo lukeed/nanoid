@@ -1,6 +1,6 @@
 {
-  "name": "nanoid",
-  "version": "2.0.0",
+  "version": "0.0.0",
+  "name": "@lukeed/nanoid",
   "repository": "lukeed/nanoid",
   "description": "A tiny (141 bytes), secure URL-friendly unique string ID generator",
   "author": "Andrey Sitnik <andrey@sitnik.ru>",
@@ -24,5 +24,8 @@
     "tap-spec": "^5.0.0",
     "tape": "^4.9.1",
     "terser": "^3.10.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
