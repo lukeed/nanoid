@@ -1,9 +1,5 @@
+node_modules
 .DS_Store
-*~
-
-node_modules/
-npm-debug.log
-
-coverage/
-docs/
-test/demo/build/
+coverage
+*.lock
+*.log
