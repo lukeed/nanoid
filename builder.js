@@ -13,8 +13,11 @@ mkdir('dist').then(() => {
 	fs.writeFileSync(pkg.module, data);
 
 	// Mutate exports for CJS
-	data = data.replace(/export default/, 'module.exports =');
 	browser = browser.replace(/export default/, 'module.exports =');
+	data = data.replace(/export default/, 'module.exports =');
+	data = data.replace(/import ([\s\S]*?) from (.*)/gi, (_, req, dep) => {
+		return `const ${req} = require(${dep.replace(';', '')});`;
+	});
 	fs.writeFileSync(pkg.main, data);
 
 	// Minify & print gzip-size
