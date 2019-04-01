@@ -4,7 +4,7 @@
   "repository": "lukeed/nanoid",
   "description": "A tiny (141 bytes), secure URL-friendly unique string ID generator",
   "author": "Andrey Sitnik <andrey@sitnik.ru>",
-  "browser": "dist/nanoid.min.js",
+  "browser": "dist/nanoid.esm.js",
   "unpkg": "dist/nanoid.min.js",
   "module": "dist/nanoid.mjs",
   "main": "dist/nanoid.js",
@@ -13,17 +13,14 @@
     "dist"
   ],
   "scripts": {
-    "build": "node builder",
+    "build": "bundt --main --module && bundt src/browser.js --unpkg --browser",
     "pretest": "npm run build",
     "test": "tape test/*.js | tap-spec"
   },
   "devDependencies": {
-    "gzip-size": "^3.0.0",
-    "mk-dirs": "^1.0.0",
-    "pretty-bytes": "^4.0.2",
+    "bundt": "^0.3.0",
     "tap-spec": "^5.0.0",
-    "tape": "^4.9.1",
-    "terser": "^3.10.0"
+    "tape": "^4.9.1"
   },
   "publishConfig": {
     "access": "public"
