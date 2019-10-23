@@ -8,17 +8,19 @@
   "unpkg": "dist/nanoid.min.js",
   "module": "dist/nanoid.mjs",
   "main": "dist/nanoid.js",
+  "types": "nanoid.d.ts",
   "license": "MIT",
   "files": [
+    "*.d.ts",
     "dist"
   ],
   "scripts": {
-    "build": "bundt --main --module && bundt src/browser.js --unpkg --browser",
+    "build": "bundt --main --module && bundt src/browser.js --unpkg --browser --minify",
     "pretest": "npm run build",
     "test": "tape test/*.js | tap-spec"
   },
   "devDependencies": {
-    "bundt": "^0.3.0",
+    "bundt": "^0.4.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.9.1"
   },
